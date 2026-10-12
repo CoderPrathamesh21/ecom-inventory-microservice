@@ -18,7 +18,7 @@ public class InventoryController {
     //@SneakyThrows
     @GetMapping("/{productId}")
     public Inventory checkInventory(@PathVariable Long productId) throws Exception {
-        //Thread.sleep(7000); // Simulate delay
+        Thread.sleep(1000); // Simulate delay
         //throw new Exception("Inventory service is down"); // Simulate service failure(retry implementation)
         return inventoryService.checkStock(productId);
     }
